@@ -104,7 +104,8 @@ For Each ws In ThisWorkbook.Sheets
   
   Next i
     
-  ' Start Loop For Final Results
+  ' Loop to calculate Greatest % Increase, Greatest % Decrease & Greatest Total Volume
+
             For x = 2 To LastRow
                 If ws.Cells(x,11).Value > ws.Cells(2,17).Value Then
                     ws.Cells(2,17).Value = ws.Cells(x,11).Value
@@ -120,6 +121,7 @@ For Each ws In ThisWorkbook.Sheets
                     ws.Cells(4,17).Value = ws.Cells(x,12).Value
                     ws.Cells(4,16).Value = ws.Cells(x,9).Value
                 End If
+                
 
             Next x
 
@@ -127,8 +129,3 @@ For Each ws In ThisWorkbook.Sheets
 Next ws
 
 End Sub
-
-
-
-
-
